@@ -1,5 +1,7 @@
-﻿@{
+﻿@using kurumsal_asp_3.Models
+@{
     ViewData["Title"] = "Home Page";
+    var data = (HomeModel)ViewData["Message"];
 }
 
 <div class="container">
@@ -7,13 +9,13 @@
         <div id="carouselExampleControls" class="carousel slide d-flex" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://via.placeholder.com/1280x400.png" alt="First slide">
+                    <img src=@data.carouserImgUrl alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://via.placeholder.com/1280x400.png" alt="Second slide">
+                    <img src=@data.carouserImgUrl alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://via.placeholder.com/1280x400.png" alt="Third slide">
+                    <img src=@data.carouserImgUrl alt="Third slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -28,17 +30,17 @@
 
         <div class="row my-5">
             <div class="col text-left">
-                <h1>Start Today</h1>
+                <h1>@data.header1</h1>
                 <p>
-                    Öğretimsel iskele, öğrenme süreci boyunca bir eğitmen tarafından öğrenciye verilen destektir. Bu destek her öğrenciye özel olarak uyarlanmıştır; Bu öğretim yaklaşımı, öğrencilerin öğretmen merkezli öğrenmeye göre daha verimli öğrenmeyi kolaylaştırma eğilimi gösteren öğrenci merkezli öğrenmeyi deneyimlemelerini sağlar.
+                    @data.text1
                 </p>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <h1>New Beginings</h1>
+                <h1>@data.header2</h1>
                 <p>
-                    Öğretimsel iskele, öğrenme süreci boyunca bir eğitmen tarafından öğrenciye verilen destektir. Bu destek her öğrenciye özel olarak uyarlanmıştır; Bu öğretim yaklaşımı, öğrencilerin öğretmen merkezli öğrenmeye göre daha verimli öğrenmeyi kolaylaştırma eğilimi gösteren öğrenci merkezli öğrenmeyi deneyimlemelerini sağlar.
+                    @data.text2
                 </p>
             </div>
             <div class="col-sm">
